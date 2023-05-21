@@ -8,8 +8,11 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
     margin-bottom: 10px;
+}
+
+header, footer{
+    padding: 20px 20px;
     background-color: bisque;
 }
 
@@ -21,6 +24,7 @@ a > h1#logoNome{
     display: inline;
     color: black;
     padding-left: 50px;
+    text-align: center;
 }
 a{
     text-decoration: none;
@@ -34,8 +38,31 @@ nav{
 }
 
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO PRINCIPAL / MAIN */
 main{
     max-width: 85%;
     background-color: aqua;
+}
+
+
+/* RODAPÉ / FOOTER */
+footer {
+    margin-top: 20px;
+    display: flex;
+}
+
+footer .titleFooter {
+    font-weight: bold;
+}
+
+footer div#redesA a {
+    display: block;
+    text-decoration: underline;
+}
+
+footer > div > ul{
+    padding-left: 20px;
+}
+footer > div > ul > li{
+    list-style-type: none;
 }
