@@ -41,7 +41,28 @@ nav{
 /* CONTEÚDO PRINCIPAL / MAIN */
 main{
     max-width: 85%;
-    background-color: aqua;
+}
+
+h2{
+    text-align: center;
+    max-width: 85%;
+    padding: 2% 0;
+}
+
+/* SERVIÇOS */
+
+main#servicos{
+    display: flex;
+    flex-wrap: wrap;
+}
+main#servicos > div{
+    display: inline-block;
+    height: 10rem;
+    width: 200px;
+    background-color: bisque;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 
