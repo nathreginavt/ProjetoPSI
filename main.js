@@ -18,6 +18,16 @@ function mudarTosa(){
     };
 }
 
+function mudarUnhas(){
+    document.getElementById('pUnhas').innerText = '\nCortamos as unhas do seu pet, com cuidado especial para aqueles bravinhos que precisam de mais delicadeza!\n\n';
+
+    const btn = document.getElementById('btnUnhas')
+    btn.innerText = 'Mostrar menos';
+    btn.onclick = function(){
+        voltar('u')
+    };
+}
+
 function mudarHosp(){
     document.getElementById('pHosp').innerText = '\nServiço de hospedagem para quando não tem com quem deixar seu pet. Na verdade tem... a gente!\n\n ';
 
@@ -38,6 +48,16 @@ function mudarSitter(){
     };
 }
 
+function mudarCreche(){
+    document.getElementById('pCreche').innerText = '\nServiço de creche, onde você deixa seu pet na casa de um dos nossos cuidadores durante o período que você estiver fora.\n\n ';
+
+    const btn = document.getElementById('btnCreche')
+    btn.innerText = 'Mostrar menos';
+    btn.onclick = function(){
+        voltar('c')
+    };
+}
+
 function voltar(tipo){
     let btn;
     switch(tipo){
@@ -53,6 +73,12 @@ function voltar(tipo){
             btn.onclick = mudarTosa;
             btn.innerText = 'Saiba Mais...';
             break;
+        case 'u':
+            document.getElementById('pUnhas').innerText = '';
+            btn = document.getElementById('btnUnhas');
+            btn.onclick = mudarUnhas;
+            btn.innerText = 'Saiba Mais...';
+            break;
         case'h':
             document.getElementById('pHosp').innerText = '';
             btn = document.getElementById('btnHosp');
@@ -63,6 +89,12 @@ function voltar(tipo){
             document.getElementById('pPetSitter').innerText = '';
             btn = document.getElementById('btnPetSitter');
             btn.onclick = mudarSitter;
+            btn.innerText = 'Saiba Mais...';
+            break;
+        case 'c':
+            document.getElementById('pCreche').innerText = '';
+            btn = document.getElementById('btnCreche');
+            btn.onclick = mudarCreche;
             btn.innerText = 'Saiba Mais...';
             break;
         default:

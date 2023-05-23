@@ -71,6 +71,17 @@ main#servicos > div{
     text-align: center;
 }
 
+#agende{
+    text-align: center;
+    padding: 1%;
+}
+
+div#agende > button#btnAgende{
+    font-size: 1rem;
+    padding: 1%;
+    background-color: black;
+    color: white;
+}
 
 /* RODAPÉ / FOOTER */
 footer {
