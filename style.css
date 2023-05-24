@@ -36,18 +36,22 @@ nav{
     justify-content: space-between;
 }
 
-
-/* CONTEÚDO PRINCIPAL / MAIN */
+/*CONTEÚDOS HOME */
 #home{
     background-image: url("img/banner_dog.jpg");
     background-size:cover;
     height: 600px;
     background-repeat: no-repeat;
-
 }
-main > p{
-    text-align: right;
+/*
+#container_home h1 p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:right;
 }
+*/
+/* CONTEÚDO PRINCIPAL / MAIN */
 
 h2{
     text-align: center;

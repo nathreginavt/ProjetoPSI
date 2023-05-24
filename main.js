@@ -100,6 +100,20 @@ function voltar(tipo){
         default:
             break;
     }
+/*document.getElementById('btnBanho').addEventListener('click', mudarBanho);*/
+
 }
 
-/*document.getElementById('btnBanho').addEventListener('click', mudarBanho);*/
+//Capturar nome do reponsável Exemplo
+/*
+function InsereNome(){
+    let dono = document.getElementById("dono")
+    let resultado = dono.value;
+    document.getElementById("pDono").innerText = result;
+}
+
+window.addEventListener("load", (event) => {
+    let btn_dono = document.getElementById("btn_ok");
+    btn_dono.addEventListener("click",InsereNome);
+});
+*/
