@@ -115,10 +115,12 @@ main#servicos > div{
     padding: 1%;
 }
 
-div#agende > button#btnAgende{
+#btnAgende{
     font-size: 1rem;
     padding: 1%;
+    margin: 0 1%;
     background-color: #fedc01;
+    display: none;
 }
 
 /* RODAPÉ / FOOTER */
