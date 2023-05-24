@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 
   <title>Vida Animal</title>
 </head>
@@ -38,11 +38,14 @@
 
       <p>Não perca tempo, venha nos visitar ou cadastre-se em nossa plataforma hoje mesmo!</p>
       <br>
-      <p>Vamos lá! Passe o cursor em cima desta chamada</p>
+
+      <p id="chamada">Vamos lá! Passe o cursor em cima desta chamada</p>
+
       <br><br><br><br>
-      <p>Querido(a) dono(a) de um peludo maravilhoso, para iniciar se identifique...</p>
+      <p id="solicitaDono"> </p>
+
       <input type="text" id="dono" name="dono">
-      <a href="cadastro.html"><input type="submit" id="btn_ok" value="Ok"></a>
+      <a href="cadastro.html"><input type="submit" class="btn_ok" value="Ok"></a>
     </div>
     <br>
 

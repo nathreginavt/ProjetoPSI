@@ -101,19 +101,22 @@ function voltar(tipo){
             break;
     }
 /*document.getElementById('btnBanho').addEventListener('click', mudarBanho);*/
-
 }
 
-//Capturar nome do reponsável Exemplo
-/*
-function InsereNome(){
-    let dono = document.getElementById("dono")
-    let resultado = dono.value;
-    document.getElementById("pDono").innerText = result;
+function passaMouse(){
+let p = document.getElementById("solicitaDono");
+p.innerText = "Querido(a) dono(a) de um peludo maravilhoso, para iniciar se identifique...";
+}
+let chama = document.getElementById("chamada");
+chama.addEventListener("mouseover",passaMouse);
+
+
+function nomeDono(){
+    let nome = document.getElementById("dono");
+    let result = nome.value;
+    let d = document.getElementById("pDono");
+    d.innerText = "Olá " + result;
 }
 
-window.addEventListener("load", (event) => {
-    let btn_dono = document.getElementById("btn_ok");
-    btn_dono.addEventListener("click",InsereNome);
-});
-*/
+let btn = document.querySelector(".btn_ok");
+btn.addEventListener("click",nomeDono);
