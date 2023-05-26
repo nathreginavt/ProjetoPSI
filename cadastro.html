@@ -31,16 +31,30 @@
 
     <form action="" id="cadastroForm">
 
-      <h3>Formulário para cadastro</h3>
+      <fieldset>
+        <legend>Cadastro do Pet</legend>
+        <label for="nomePet">Nome do animal: </label>
+        <input type="text" id="nomePet" name="nomePet" required>
 
-      <label for="nomePet">Nome do animal: </label>
-      <input type="text" id="nomePet" name="nomePet">
+        <label for="idade">Idade: </label>
+        <input type="text" id="idade" name="idade">
 
-      <label for="idade">Idade: </label>
-      <input type="text" id="idade" name="idade">
+        <label for="raca">Raça: </label>
+        <input type="text" id="raca" name="raca">
+      </fieldset>
 
-      <label for="raca">Raça: </label>
-      <input type="text" id="raca" name="raca">
+      <fieldset>
+        <legend>Cadastre-se Fulano</legend>
+
+        <label for="nomeDono">Nome do dono: </label>
+        <input type="text" id="nomeDono" name="nomeDono">
+
+        <label for="tel">Telefone: </label>
+        <input type="tel" id="tel" name="tel">
+
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" name="email">
+      </fieldset>
 
     </form>
 
@@ -51,8 +65,17 @@
       <li id="item2"></li>
       <li id="item3"></li>
     </ul>
+    <br>
 
-    <br><br><br><br><br><br>
+    <ul id="listaDono">
+      <li id="item4"></li>
+      <li id="item5"></li>
+      <li id="item6"></li>
+    </ul>
+<button>Editar</button>
+<button>Salvar</button>
+
+    <br><br><br><br>
   </main>
 
   <footer>

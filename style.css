@@ -76,14 +76,6 @@ nav{
     padding-top: 3%;
     font-size: 1.2rem;
 }
-/*
-#container_home h1 p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:right;
-}
-*/
 
 /* CONTEÚDO PRINCIPAL / MAIN */
 
@@ -141,5 +133,14 @@ footer > div > ul{
     padding-left: 20px;
 }
 footer > div > ul > li{
+    list-style-type: none;
+}
+
+/*Tela Cadastros*/
+#lista{
+    list-style-type: none;
+}
+
+#listaDono{
     list-style-type: none;
 }

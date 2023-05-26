@@ -102,29 +102,11 @@ function voltar(tipo) {
     }
     /*document.getElementById('btnBanho').addEventListener('click', mudarBanho);*/
 }
-/*
-function passaMouse(){
-let p = document.getElementById("solicitaDono");
 
-}
-let chama = document.getElementById("chamada");
-chama.addEventListener("mouseover",passaMouse);
-
-
-function nomeDono(){
-    let nome = document.getElementById("dono");
-    let result = nome.value;
-    let d = document.getElementById("pDono");
-    d.innerText = "Olá " + result;
-}
-
-let btn = document.querySelector(".btn_ok");
-btn.addEventListener("click",nomeDono);
-*/
 
 /*Tela Cadastro*/
-
 function geraLista() {
+    /*Informações Animal*/
     let ul = document.getElementById("lista")
     let primeiroLi_Base = document.querySelector("li")
 
@@ -138,19 +120,46 @@ function geraLista() {
     terceiroLi = document.getElementById("raca").value
 
     let l1 = document.getElementById("item1")
-    l1.innerText = primeiroLi
+    l1.innerText = "Pet: " + primeiroLi
     let l2 = document.getElementById("item2")
-    l2.innerText = segundoLi
+    l2.innerText = "Idade: " + segundoLi
     let l3 = document.getElementById("item3")
-    l3.innerText = terceiroLi
+    l3.innerText = "Raça: " + terceiroLi
 
     lista.appendChild(l1)
     lista.appendChild(l2)
     lista.appendChild(l3)
+
+    /*Informações Dono*/
+    let ulDono = document.getElementById("listaDono")
+    let liDono = document.querySelector("li")
+
+    let nomeDono = ulDono[0]
+    nomeDono = document.getElementById("nomeDono").value
+
+    let telDono = liDono.parentElement.children[1]
+    telDono = document.getElementById("tel").value
+
+    let emailDono = liDono.parentElement.children[2]
+    emailDono = document.getElementById("email").value
+
+    let l4 = document.getElementById("item4")
+    l4.innerText = "Dono(a): " + nomeDono
+    let l5 = document.getElementById("item5")
+    l5.innerText = "Telefone: " + telDono
+    let l6 = document.getElementById("item6")
+    l6.innerText = "E-mail: " + emailDono
+
+    listaDono.appendChild(l4)
+    listaDono.appendChild(l5)
+    listaDono.appendChild(l6)
+
+
 }
 window.onload = () => {
     let cadastrar = document.getElementById("btn_cadastrar");
     cadastrar.addEventListener("click", geraLista);
+
 }
 
 

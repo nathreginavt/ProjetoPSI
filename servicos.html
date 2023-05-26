@@ -1,140 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
 
-    <title>Vida Animal</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
 
-  <body>
-    
-     <header>
+  <title>Vida Animal</title>
+</head>
 
-      <a href="index.html" id="linkHeader">
-        <img src="img/pata.png" alt="" id="logo">
-        <h1 id="logoNome">VIDA ANIMAL</h1>
-      </a>
-    
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="loja.html">Lojinha</a>
-      </nav>
-    </header>
-    
-    <h2>SERVIÇOS</h2>
+<body>
 
-    <main id="servicos">
+  <header>
 
-      <br>
-      <div>
-        <h3>BANHO</h3>
-        <p id="pBanho">  </p>
-        <button id="btnBanho" onclick="mudarBanho()">Saiba Mais...</button>
-      </div>
+    <a href="index.html" id="linkHeader">
+      <img src="img/pata.png" alt="" id="logo">
+      <h1 id="logoNome">VIDA ANIMAL</h1>
+    </a>
 
-      <div>
-        <h3>TOSA</h3>
-        <p id="pTosa"></p>
-        <button id="btnTosa" onclick="mudarTosa()">Saiba Mais...</button>
-      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="loja.html">Lojinha</a>
+    </nav>
+  </header>
 
-      <div>
-        <h3>CUIDADO COM AS UNHAS</h3>
-        <p id="pUnhas"></p>
-        <button id="btnUnhas" onclick="mudarUnhas()">Saiba Mais...</button>
-      </div>
+  <h2>SERVIÇOS</h2>
 
-      <div>
-        <h3>HOSPEDAGEM</h3>
-        <p id="pHosp"></p>
-        <button id="btnHosp" onclick="mudarHosp()">Saiba Mais...</button>
-      </div>
+  <main id="servicos">
 
-      <div>
-        <h3>PET SITTER</h3>
-        <p id="pPetSitter"></p>
-        <button id="btnPetSitter" onclick="mudarSitter()">Saiba Mais...</button>
-      </div>
-
-      <div>
-        <h3>CRECHE</h3>
-        <p id="pCreche"></p>
-        <button id="btnCreche" onclick="mudarCreche()">Saiba Mais...</button>
-      </div>
-    </main>
-
-    <div id="agende"> <br>
-      <input type="name" id="nome" name="nome" placeholder="Digite seu nome"> 
-      <input type="button" id="btnOK" value="OK" disabled="true">
-
-      <br> <br>
-      <p id="pNome">Olá, Sr.(a) ____________________! </p>
-
-      <p> Gostaria de cadastrar o seu pet? </p>
-      
-      <br>
-    
-      <a href="cadastro.html"><button id="btnAgende">CADASTRAR PET </button></a>
-      <!--<button id="btnApagar"> APAGAR </button> -->
+    <br>
+    <div>
+      <h3>BANHO</h3>
+      <p id="pBanho"> </p>
+      <button id="btnBanho" onclick="mudarBanho()">Saiba Mais...</button>
     </div>
 
+    <div>
+      <h3>TOSA</h3>
+      <p id="pTosa"></p>
+      <button id="btnTosa" onclick="mudarTosa()">Saiba Mais...</button>
+    </div>
+
+    <div>
+      <h3>CUIDADO COM AS UNHAS</h3>
+      <p id="pUnhas"></p>
+      <button id="btnUnhas" onclick="mudarUnhas()">Saiba Mais...</button>
+    </div>
+
+    <div>
+      <h3>HOSPEDAGEM</h3>
+      <p id="pHosp"></p>
+      <button id="btnHosp" onclick="mudarHosp()">Saiba Mais...</button>
+    </div>
+
+    <div>
+      <h3>PET SITTER</h3>
+      <p id="pPetSitter"></p>
+      <button id="btnPetSitter" onclick="mudarSitter()">Saiba Mais...</button>
+    </div>
+
+    <div>
+      <h3>CRECHE</h3>
+      <p id="pCreche"></p>
+      <button id="btnCreche" onclick="mudarCreche()">Saiba Mais...</button>
+    </div>
+  </main>
+
+  <div id="agende"> <br>
+    <input type="name" id="nome" name="nome" placeholder="Digite seu nome">
+    <input type="button" id="btnOK" value="OK" disabled="true">
+
+    <br> <br>
+    <p id="pNome">Olá, Sr.(a) ____________________! </p>
+
+    <p> Gostaria de cadastrar o seu pet? </p>
+
+    <br>
+
+    <a href="cadastro.html"><button id="btnAgende">CADASTRAR PET </button></a>
+    <!--<button id="btnApagar"> APAGAR </button> -->
+  </div>
+
   <footer>
-      <div class="divVazio">   </div>
+    <div class="divVazio"> </div>
 
-      <div id="enderecoA"> 
-          <p class="titleFooter">Endereço</p>
-          <p>Rua dos Animais, nº 01 </p>
-          <p>Vila Animal, Santos/SP</p>
-          <p>CEP 11075-320</p>
-       </div>
+    <div id="enderecoA">
+      <p class="titleFooter">Endereço</p>
+      <p>Rua dos Animais, nº 01 </p>
+      <p>Vila Animal, Santos/SP</p>
+      <p>CEP 11075-320</p>
+    </div>
 
-       <div id="funcionamentoA">
-          <p class="titleFooter">Funcionamento</p>
-          <p>Segunda à sexta</p>
-          <p>Das 09h as 17h</p>
-       </div>
+    <div id="funcionamentoA">
+      <p class="titleFooter">Funcionamento</p>
+      <p>Segunda à sexta</p>
+      <p>Das 09h as 17h</p>
+    </div>
 
-       <div id="contatoA">
-          <p class="titleFooter">Contato</p>
-          <p>(13) 3232-3232</p>
-          <p>(13) 99140-3232</p>
-          <p>contato@vidaanimal.com.br</p>
-       </div>
+    <div id="contatoA">
+      <p class="titleFooter">Contato</p>
+      <p>(13) 3232-3232</p>
+      <p>(13) 99140-3232</p>
+      <p>contato@vidaanimal.com.br</p>
+    </div>
 
-       <div id="redesA">
-          <p class="titleFooter">Redes Sociais</p>
-          <ul>
-              <li><a href="https://www.instagram.com" target="_blank" id="insta">Instagram</a></li>
-              <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-              <li><a href="https://www.youtube.com" target="_blank">Youtube</a></li> 
-          </ul>
-      </div>
+    <div id="redesA">
+      <p class="titleFooter">Redes Sociais</p>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank" id="insta">Instagram</a></li>
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">Youtube</a></li>
+      </ul>
+    </div>
 
-      <div class="divVazio">  </div>
+    <div class="divVazio"> </div>
   </footer>
-
   <script>
-
     let nm = document.getElementById("nome")
-    nome.addEventListener('keypress', () => {
+    nm.addEventListener('keypress', () => {
       document.getElementById("btnOK").disabled = false;
     })
 
     let ok = document.getElementById("btnOK")
     ok.addEventListener('click', () => {
-          let p = document.getElementById("pNome")
-          p.innerText = "Olá, Sr.(a) " + document.getElementById("nome").value + "!"
+      let p = document.getElementById("pNome")
+      p.innerText = "Olá, Sr.(a) " + document.getElementById("nome").value + "!"
 
-          document.getElementById("btnAgende").style.display = "inline";
+      document.getElementById("btnAgende").style.display = "inline";
     }
     );
-  
   </script>
 
-  </body>
+</body>
+
 </html>
