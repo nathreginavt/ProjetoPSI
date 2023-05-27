@@ -79,11 +79,17 @@ nav{
 
 /* CONTEÚDO PRINCIPAL / MAIN */
 
+main.main{
+    max-width: 90%;
+}
+
 h2{
     text-align: center;
     max-width: 85%;
     padding: 2% 0;
 }
+
+
 
 /* SERVIÇOS */
 
@@ -143,4 +149,89 @@ footer > div > ul > li{
 
 #listaDono{
     list-style-type: none;
+}
+
+
+/*PÁGINA CONTATO*/
+#mapa {
+    width: 48%;
+    height: 70%;
+    float: right;
+    border: 0;
+    margin-top: 2%;
+}
+
+/*FORMULÁRIO CONTATO*/
+form.formContato {
+    width: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    padding: 1%;
+    background-color: #FEF19F;
+
+}
+
+.formContato div>.inputsForm {
+    display: inline-block;
+    width: 50%;
+    margin: 2% auto;
+    padding: 1%;
+    font-size: 1rem;
+
+}
+
+.inputsForm input {
+    padding: 1.5%;
+    margin-bottom: 3%;
+    width: 45%;
+    margin-left: 3%;
+
+}
+
+.inputsForm>select,
+.inputsForm>label,
+.inputsForm label>textarea {
+    padding: 1.5%;
+    margin-bottom: 3%;
+    margin-left: 3.5%;
+
+}
+
+.avisos {
+    background-color: #fdc573;
+    padding: 1%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.conteudoForm{
+    padding: 3%;
+    margin-bottom: 3%;
+}
+.conteudoForm > legend{
+    font-size: 1.15rem;
+    color: #702353;
+}
+
+/*
+#atendimento {
+    margin-top: 2%;
+}
+
+#atendimento>p {
+    text-align: right;
+}
+*/
+
+#btnContato,
+.btnEnviar {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1%;
+    margin: 0 auto;
+    background-color: #fdc573;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
 }
