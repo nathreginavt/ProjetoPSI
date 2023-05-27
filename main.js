@@ -136,34 +136,34 @@ window.onload = () => {
     cadastrar.addEventListener("click", geraLista);
 }
 
-/*USO DO AJAX */
+function salvarDados(){
+    let nome = document.getElementById("nomePet").value;
+    let raca = document.getElementById("raca").value;
+    let idade = document.getElementById("idade").value;
 
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("raca", raca);
+    localStorage.setItem("idade", idade);
+}
 
+function criaTabela(){
+    let linha = document.createElement('tr');
 
+    let colN = document.createElement('td');
+    let colR = document.createElement('td');
+    let colI = document.createElement('td');
 
+    let nm = localStorage.getItem('nome');
+    let rc = localStorage.getItem('raca');
+    let ida = localStorage.getItem('idade');
 
+    colN.textContent = nm;
+    colR.textContent = rc;
+    colI.textContent = ida;
 
+    linha.appendChild(colN);
+    linha.appendChild(colR);
+    linha.appendChild(colI);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    document.table.appendChild(linha);
+}
