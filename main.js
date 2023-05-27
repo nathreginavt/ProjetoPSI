@@ -130,37 +130,17 @@ function geraLista() {
     lista.appendChild(l2)
     lista.appendChild(l3)
 
-    /*Informações Dono*/
-    let ulDono = document.getElementById("listaDono")
-    let liDono = document.querySelector("li")
-
-    let nomeDono = ulDono[0]
-    nomeDono = document.getElementById("nomeDono").value
-
-    let telDono = liDono.parentElement.children[1]
-    telDono = document.getElementById("tel").value
-
-    let emailDono = liDono.parentElement.children[2]
-    emailDono = document.getElementById("email").value
-
-    let l4 = document.getElementById("item4")
-    l4.innerText = "Dono(a): " + nomeDono
-    let l5 = document.getElementById("item5")
-    l5.innerText = "Telefone: " + telDono
-    let l6 = document.getElementById("item6")
-    l6.innerText = "E-mail: " + emailDono
-
-    listaDono.appendChild(l4)
-    listaDono.appendChild(l5)
-    listaDono.appendChild(l6)
-
-
 }
 window.onload = () => {
     let cadastrar = document.getElementById("btn_cadastrar");
     cadastrar.addEventListener("click", geraLista);
-
 }
+
+/*USO DO AJAX */
+
+
+
+
 
 
 
