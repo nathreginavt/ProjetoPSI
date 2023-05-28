@@ -131,20 +131,6 @@ function geraLista() {
     lista.appendChild(l3)
 
 }
-window.onload = () => {
-    let cadastrar = document.getElementById("btn_cadastrar");
-    cadastrar.addEventListener("click", geraLista);
-}
-
-function salvarDados(){
-    let nome = document.getElementById("nomePet").value;
-    let raca = document.getElementById("raca").value;
-    let idade = document.getElementById("idade").value;
-
-    localStorage.setItem("nome", nome);
-    localStorage.setItem("raca", raca);
-    localStorage.setItem("idade", idade);
-}
 
 function criaTabela(){
     let linha = document.createElement('tr');
@@ -165,5 +151,32 @@ function criaTabela(){
     linha.appendChild(colR);
     linha.appendChild(colI);
 
-    document.table.appendChild(linha);
+    var tabela = document.getElementById('tabelaPerfil')
+    tabela.appendChild(linha);
+}
+
+function salvarDados(){
+    let nome = document.getElementById("nomePet").value;
+    document.getElementById("item1").innerText = "";
+
+    let raca = document.getElementById("raca").value;
+    document.getElementById("item2").innerText = "";
+
+    let idade = document.getElementById("idade").value;
+    document.getElementById("item3").innerText = "";
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("raca", raca);
+    localStorage.setItem("idade", idade);
+
+    setTimeout(criaTabela, 100); // Adiciona um pequeno atraso de 100ms antes de chamar a função criaTabela
+}
+
+
+window.onload = () => {
+    let cadastrar = document.getElementById("btn_cadastrar");
+    cadastrar.addEventListener("click", geraLista);
+
+    let salvar = document.getElementById("btn_salvar");
+    salvar.addEventListener("click", salvarDados)
 }
