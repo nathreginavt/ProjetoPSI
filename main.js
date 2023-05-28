@@ -236,3 +236,20 @@ function validaFormulario() {
         return false;
     }
 }
+
+/*Pegar o nome digitado pelo usuário na tela Home*/
+function pegaNomeDono(){
+    let dono = document.getElementById("dono").value;
+    localStorage.setItem("dono", dono);
+    window.location.href = "cadastro.html";
+}
+
+/*Colocar esse nome digitado pelo usuário na tela Cadastro*/
+window.onload = function(){
+    let nome = localStorage.getItem("dono")
+    if(nome){
+        let mensagem = document.getElementById("mensagemDono");
+        mensagem.innerText = "Olá, " + nome + "!";
+    }
+}
+
