@@ -167,9 +167,10 @@ form.formContato {
     display: inline-block;
     margin-top: 2%;
     padding: 1%;
+    margin-bottom: 2%;
     background-color: #FEF19F;
-
 }
+
 
 .formContato div>.inputsForm {
     display: inline-block;
@@ -247,4 +248,3 @@ th, td{
     border: 1px solid black;
     padding: 5px 20px;
 }
-

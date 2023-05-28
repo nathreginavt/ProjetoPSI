@@ -132,7 +132,7 @@ function geraLista() {
 
 }
 
-function criaTabela(){
+function criaTabela() {
     let linha = document.createElement('tr');
 
     let colN = document.createElement('td');
@@ -155,7 +155,7 @@ function criaTabela(){
     tabela.appendChild(linha);
 }
 
-function salvarDados(){
+function salvarDados() {
     let nome = document.getElementById("nomePet").value;
     document.getElementById("item1").innerText = "";
 
@@ -177,6 +177,62 @@ window.onload = () => {
     let cadastrar = document.getElementById("btn_cadastrar");
     cadastrar.addEventListener("click", geraLista);
 
+}
+
+window.onload = () => {
     let salvar = document.getElementById("btn_salvar");
     salvar.addEventListener("click", salvarDados)
+}
+
+/*Valida formulário*/
+function validaFormulario() {
+    let formulario = document.querySelector(".formContato");
+    let nome = document.getElementById("nomeForm");
+    let email = document.getElementById("emailForm");
+    let telefone = document.getElementById("telefoneForm");
+    let select = document.getElementById("selectC");
+    let mensagem = document.getElementById("mensagemC");
+
+    if (nome.value == "") {
+        alert("Preencha seu nome");
+        //nome.style.border = "1px solid red";
+    }
+    else if (email.value == "" || !emailValido(email.value)) {
+        alert("Preencha seu e-mail seguindo o padrão seunome@gmail.com");
+        
+    }
+    else if (telefone.value == "" || !telefoneValido(telefone.value)) {
+        alert("Preencha seu telefone no padrão (DDD)XXXXX-XXXX");
+      
+    }
+    
+    else if (mensagem.value == "") {
+        alert("Escreva uma mensagem");
+        
+    }
+    else{
+        alert("Dados enviados com sucesso!!");
+    }
+
+    function emailValido(email) {
+        const emailRegex = new RegExp(
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+        )
+
+        if (emailRegex.test(email)) {
+            return true;
+        }
+        return false;
+    }
+ 
+    function telefoneValido(telefone){
+        const telefoneRegex = new RegExp(
+            /^\(\d{2,3}\)\d{4,5}-\d{4}$/
+    
+        )
+        if (telefoneRegex.test(telefone)){
+            return true;
+        }
+        return false;
+    }
 }

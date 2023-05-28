@@ -1,109 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
-    
-    <title>Vida Animal</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+
+  <title>Vida Animal</title>
 </head>
+
 <body>
 
-    <header>
+  <header>
 
-        <a href="index.html" id="linkHeader">
-          <img src="img/pata.png" alt="" id="logo">
-          <h1 id="logoNome">VIDA ANIMAL</h1>
-        </a>
-    
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="servicos.html">Serviços</a>
-          <a href="loja.html">Lojinha</a>
-          <a href="contato.html">Contato</a>
-        </nav>
-      </header>
+    <a href="index.html" id="linkHeader">
+      <img src="img/pata.png" alt="" id="logo">
+      <h1 id="logoNome">VIDA ANIMAL</h1>
+    </a>
 
-    <main class="main">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="loja.html">Lojinha</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-    <form class="formContato" action=" " method="post">
+  <main class="main">
 
-    <h2>Avisos - Dados inválidos</h2>
-    <div class="avisos">
+    <form class="formContato" action="" method="">
+
+      <h2>Avisos - Dados inválidos</h2>
+      <div class="avisos">
         <p>- Nome completo inválido, o campo não pode estar em branco</p>
         <p>- O e-mail obrigatoriamente tem que estar acompanhado do @</p>
         <p>- Telefone inválido, tem que conter DDD + 9 dígitos</p>
         <p>- Mensagem inválida, o campo não pode estar em branco</p>
-    </div>
+      </div>
 
-    <fieldset class="conteudoForm">
+      <fieldset class="conteudoForm">
         <legend><b>Dados cadastrais</b></legend>
-       
+
         <small> * = Campo Obrigatório</small>
         <br><br>
 
         <div class="inputsForm">
-            <label for="nomeForm">* Nome: </label>
+          <label for="nomeForm">* Nome: </label>
 
-            <input type="text" id="nomeForm" name="nomeForm" class="nomeC" placeholder="Nome Completo" required>
+          <input type="text" id="nomeForm" name="nomeForm" class="nomeC" placeholder="Nome Completo">
         </div>
 
         <div class="inputsForm">
-            <label for="emailForm">* E-mail: </label>
-            <input type="email" id="emailForm" name="emailForm" class="emailC" placeholder="E-mail" required>
+          <label for="emailForm">* E-mail: </label>
+          <input type="email" id="emailForm" name="emailForm" class="emailC" placeholder="E-mail">
         </div>
         <div class="inputsForm">
-            <label for="telefoneForm">* Telefone: </label>
-            <input type="tel" id="telefoneForm"  name="telefoneForm" class="telefoneC" placeholder="Telefone"
-                required minlength="11" maxlength="11">
+          <label for="telefoneForm">* Telefone: </label>
+          <input type="tel" id="telefoneForm" name="telefoneForm" class="telefoneC" placeholder="Telefone">
         </div>
-    </fieldset>
+      </fieldset>
 
-    <fieldset class="conteudoForm">
+      <fieldset class="conteudoForm">
         <legend><b>Envie-nos a sua mensagem!</b></legend>
         <div class="inputsForm">
-            <label for="selectC">Motivo do contato: </label>
-            <select id="selectC" required>
-                <option value="duvida">Dúvidas, perguntas, questionamentos</option>
-                <option value="sugestao">Sugestões de melhoria</option>
-                <option value="reclamacao">Reclamação</option>
-                <option value="relato">Relato ou História na Abraccii</option>
-                <option value="apoiar"> Quero apoiar </option>
-                <option value="outro"> Outro </option>
+          <label for="selectC">Motivo do contato: </label>
+          <select id="selectC" required>
+            <option value="duvida">Dúvidas, perguntas, questionamentos</option>
+            <option value="sugestao">Sugestões de melhoria</option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="relato">Relato ou História na Abraccii</option>
+            <option value="apoiar"> Quero apoiar </option>
+            <option value="outro"> Outro </option>
 
-            </select>
+          </select>
         </div>
         <div class="inputsForm">
-            <label for="mensagemC">* Mensagem: </label>
-            <textarea rows="10" cols="50" id="mensagemC" placeholder="Mensagem" required></textarea>
+          <label for="mensagemC">* Mensagem: </label>
+          <textarea rows="10" cols="50" id="mensagemC" placeholder="Mensagem"></textarea>
         </div>
-    </fieldset>
-        <button type="submit" id="btnContato">Enviar</button>
-   
-   
-</form>
+      </fieldset>
+      <button type="submit" id="btnContato" onclick="validaFormulario()">Enviar</button>
+
+    </form>
 
 
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.852207619047!2d-46.341177672822845!3d-23.952905199721044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce0373a8874e11%3A0xcc3e1a4a8487b217!2sPetz!5e0!3m2!1spt-BR!2sbr!4v1685113292500!5m2!1spt-BR!2sbr" 
-  id="mapa" referrerpolicy="no-referrer-when-downgrade" title="Mapa da localização do Pet Shop">        
-</iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.852207619047!2d-46.341177672822845!3d-23.952905199721044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce0373a8874e11%3A0xcc3e1a4a8487b217!2sPetz!5e0!3m2!1spt-BR!2sbr!4v1685113292500!5m2!1spt-BR!2sbr"
+      id="mapa" referrerpolicy="no-referrer-when-downgrade" title="Mapa da localização do Pet Shop">
+    </iframe>
 
-<br><Br>
-<!--
-<div id="atendimento">
-    <p>Atendimento: </p>
-    <p>(13) 3232-3232 </p>
-    <p>(13) 99140-3232</p>
-</div>
--->
 
-</main>
+  </main>
 
-<footer>
+  <footer>
     <div class="divVazio"> </div>
 
     <div id="enderecoA">
@@ -138,5 +130,8 @@
     <div class="divVazio"> </div>
   </footer>
 
+
+
 </body>
+
 </html>
