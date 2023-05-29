@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  <script src="form.js"></script>
 
   <title>Vida Animal</title>
 </head>
@@ -31,14 +31,14 @@
 
   <main class="main">
 
-    <form class="formContato" action="" method="">
+    <form class="formContato" action="" method="" onsubmit="return validaFormulario()">
 
-      <h2>Avisos - Dados inválidos</h2>
+      <h2 id="aviso">Avisos - Dados inválidos</h2>
       <div class="avisos">
-        <p>- Nome completo inválido, o campo não pode estar em branco</p>
-        <p>- O e-mail obrigatoriamente tem que estar acompanhado do @</p>
-        <p>- Telefone inválido, tem que conter DDD + 9 dígitos</p>
-        <p>- Mensagem inválida, o campo não pode estar em branco</p>
+        <p id="avisoNome">- Nome completo inválido, o campo não pode estar em branco</p>
+        <p id="avisoEmail">- E-mail inválido, preencha no padrão seunome@email.com</p>
+        <p id="avisoTelefone">- Telefone inválido, preencha no padrão (DDD) XXXXX-XXXX</p>
+        <p id="avisoMsg">- Mensagem inválida, o campo não pode estar em branco</p>
       </div>
 
       <fieldset class="conteudoForm">
@@ -82,7 +82,8 @@
           <textarea rows="10" cols="50" id="mensagemC" placeholder="Mensagem"></textarea>
         </div>
       </fieldset>
-      <button type="submit" id="btnContato" onclick="validaFormulario()">Enviar</button>
+
+      <button id="btnContato" >Enviar</button>
 
     </form>
 
