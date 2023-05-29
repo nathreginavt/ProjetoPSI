@@ -22,7 +22,6 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="servicos.html">Serviços</a>
-      <a href="loja.html">Lojinha</a>
       <a href="contato.html">Contato</a>
       <a href="perfil.html">Perfil</a>
     </nav>
@@ -47,7 +46,7 @@
       </fieldset>
     </form>
 
-    <input type="submit" value="Ok" onclick = "geralista()"id="btn_cadastrar">
+    <input type="submit" value="Ok" onclick="geraLista()" id="btn_cadastrar">
 
     <ul id="lista">
       <li id="item1"></li>
@@ -56,8 +55,8 @@
     </ul>
     <br>
 
-<button id="btn_Editar">Editar</button>
-<button id="btn_salvar">Salvar</button>
+<button id="btn_Editar" onclick="editarDados()" disabled="true">Editar</button>
+<button id="btn_salvar" onclick="salvarDados()"disabled=true>Salvar</button>
 
     <br><br><br><br>
   </main>

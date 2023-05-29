@@ -107,17 +107,21 @@ function voltar(tipo) {
 /*Tela Cadastro*/
 function geraLista() {
     /*Informações Animal*/
+
     let ul = document.getElementById("lista")
     let primeiroLi_Base = document.querySelector("li")
 
     let primeiroLi = ul.firstChild
     primeiroLi = document.getElementById("nomePet").value
+    document.getElementById("nomePet").disabled = true;
 
     let segundoLi = primeiroLi_Base.parentElement.children[1]
     segundoLi = document.getElementById("idade").value
+    document.getElementById("idade").disabled = true;
 
     let terceiroLi = primeiroLi_Base.parentElement.children[2]
     terceiroLi = document.getElementById("raca").value
+    document.getElementById("raca").disabled = true;
 
     let l1 = document.getElementById("item1")
     l1.innerText = "Pet: " + primeiroLi
@@ -130,6 +134,20 @@ function geraLista() {
     lista.appendChild(l2)
     lista.appendChild(l3)
 
+    document.getElementById("btn_Editar").disabled = false;
+    document.getElementById("btn_salvar").disabled = false;
+    document.getElementById("btn_cadastrar").disabled = true;
+}
+
+function editarDados(){
+
+    document.getElementById("nomePet").disabled = false;
+    document.getElementById("idade").disabled = false;
+    document.getElementById("raca").disabled = false;
+    
+    document.getElementById("btn_Editar").disabled = true;
+    document.getElementById("btn_salvar").disabled = true;
+    document.getElementById("btn_cadastrar").disabled = false;
 }
 
 function criaTabela() {
@@ -156,20 +174,34 @@ function criaTabela() {
 }
 
 function salvarDados() {
+
     let nome = document.getElementById("nomePet").value;
+    document.getElementById("nomePet").value = "";
     document.getElementById("item1").innerText = "";
 
     let raca = document.getElementById("raca").value;
+    document.getElementById("raca").value = "";
     document.getElementById("item2").innerText = "";
 
     let idade = document.getElementById("idade").value;
+    document.getElementById("idade").value = "";
     document.getElementById("item3").innerText = "";
 
     localStorage.setItem("nome", nome);
     localStorage.setItem("raca", raca);
     localStorage.setItem("idade", idade);
 
-    setTimeout(criaTabela, 100); // Adiciona um pequeno atraso de 100ms antes de chamar a função criaTabela
+    document.getElementById("nomePet").disabled = false;
+    document.getElementById("idade").disabled = false;
+    document.getElementById("raca").disabled = false;
+    
+    document.getElementById("btn_Editar").disabled = true;
+    document.getElementById("btn_salvar").disabled = true;
+    document.getElementById("btn_cadastrar").disabled = false;
+
+    alert("Pet cadastrado com sucesso!!");
+    //window.location.href = "perfil.html";
+    criaTabela;
 }
 
 
