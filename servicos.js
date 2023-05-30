@@ -1,14 +1,19 @@
-//CREATE INNERTEXT ELEMENTOS
+//CREATE INNERTEXT ELEMENTOS:
 
 //BANHO
 function mudarBanho() {
+
+    //inserir innertext no paragrafo
     document.getElementById('pBanho').innerText = '\nDamos banho no seu cachorro ou gato com agua e os melhor produtos de higiene animal, pois ele merece o melhor!\n\n ';
 
+    //alterar innertext e onclick do botão
     const btn = document.getElementById('btnBanho')
     btn.innerText = 'Mostrar menos';
     btn.onclick = function () {
         voltar('b')
     };
+
+    //remover listener, para poder adicioná-lo novamente quando precisar
     btn.removeEventListener('click', mudarBanho);
 }
 
@@ -76,9 +81,15 @@ function mudarCreche() {
 //REMOVE INNERTEXT ELEMENTOS
 function voltar(tipo) {
     let btn;
+    //swtich com a variável 'tipo' (parametro da função)
     switch (tipo) {
+
+        //caso o valor da variável seja igual a 'b'...
         case 'b':
+            //apagar innertext do paragrafo
             document.getElementById('pBanho').innerText = '';
+
+            //alterar innertext e onclick do botão
             btn = document.getElementById('btnBanho');
             btn.onclick = mudarBanho;
             btn.innerText = 'Saiba Mais...';
@@ -113,6 +124,7 @@ function voltar(tipo) {
             btn.onclick = mudarCreche;
             btn.innerText = 'Saiba Mais...';
             break;
+        //caso não seja nenhuma das opções acima
         default:
             break;
     }
@@ -138,7 +150,7 @@ window.onload = () => {
     let btnCreche = document.getElementById("btnCreche");
     btnCreche.addEventListener("click", mudarCreche);
 
-    
+
     //UPDATE PARAGRAFO - FINAL DA PAG HTML
     let nm = document.getElementById("nome")
     nm.addEventListener('keypress', () => {
