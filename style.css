@@ -127,6 +127,11 @@ main#servicos>div {
     display: none;
 }
 
+#btnAgende:hover{
+    background-color: #ffa51f;;
+
+}
+
 /* RODAPÉ / FOOTER */
 footer {
     display: flex;

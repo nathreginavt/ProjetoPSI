@@ -140,16 +140,55 @@ function geraLista() {
     document.getElementById("btn_cadastrar").disabled = true;
 }
 
-function editarDados(){
+function editarDados() {
 
     document.getElementById("nomePet").disabled = false;
     document.getElementById("idade").disabled = false;
     document.getElementById("raca").disabled = false;
-    
+
     document.getElementById("btn_Editar").disabled = true;
     document.getElementById("btn_salvar").disabled = true;
     document.getElementById("btn_cadastrar").disabled = false;
 }
+/*
+function adicionarDados() {
+    let nome = document.getElementById("nomePet").value;
+    let raca = document.getElementById("raca").value;
+    let idade = document.getElementById("idade").value;
+
+    if (nome && raca && idade) {
+        let dadosArmazenados = localStorage.getItem('dados')
+        let dados = [];
+
+        if (dadosArmazenados) {
+            dados = JSON.parse(dadosArmazenados);
+        }
+        dados.push({ nome: nome, idade: idade, raca: raca })
+        localStorage.setItem('dados', JSON.stringify(dados))
+
+        document.getElementById("nomePet").value = "";
+        criarTabela();
+    }
+    else {
+        alert("Por favor, preencha todos os campos");
+    }
+}
+
+function criarTabela(){
+    let dadosArmazenados = localStorage.getItem('dados');
+    let dados = JSON.parse(dadosArmazenados);
+
+    let tabela = document.getElementById("tabelaPerfil");
+    tabela.innerHTML = "";
+    let cabecalho = "<tr><th>Nome</th><th>Raça</th><th>Idade</th></tr>";
+
+    let linhas = "";
+    for(let i = 0; i < dados.length; i++){
+        linhas += "<tr><td>" + dados[i].nome + "</td><td>" + dados[i].raca + "</td><td>" + dados[i].idade + "</td></tr>";
+    }
+    tabela.innerHTML = cabecalho + linhas;
+}
+*/
 
 function criaTabela() {
     let linha = document.createElement('tr');
@@ -171,7 +210,10 @@ function criaTabela() {
     linha.appendChild(colI);
 
     var tabela = document.getElementById('tabelaPerfil')
-    tabela.appendChild(linha);
+    var tbody = document.getElementById('tbody');
+    //tabela.appendChild(linha);
+    tbody.appendChild(linha);
+
 }
 
 function salvarDados() {
@@ -203,7 +245,7 @@ function salvarDados() {
     document.getElementById("lista").style.display = "none";
     alert("Pet cadastrado com sucesso!!");
     //window.location.href = "perfil.html";
-    criaTabela;
+    criaTabela();
 }
 
 window.onload = () => {
@@ -217,17 +259,20 @@ window.onload = () => {
 }
 
 /*Pegar o nome digitado pelo usuário na tela Home*/
-function pegaNomeDono(){
+function pegaNomeDono() {
     let dono = document.getElementById("dono").value;
     localStorage.setItem("dono", dono);
     window.location.href = "cadastro.html";
 }
 
 /*Colocar esse nome digitado pelo usuário na tela Cadastro*/
-window.onload = function(){
+window.onload = function () {
     let nome = localStorage.getItem("dono")
-    if(nome){
-        let mensagem = document.getElementById("mensagemDono");
-        mensagem.innerText = "Olá, " + nome + "!";
+    if (nome) {
+        let mensagem = document.getElementsByClassName("mensagemDono");
+        for (let i = 0; i < mensagem.length; i++) {
+            mensagem[i].innerText = "Olá, " + nome + "!";
+        }
     }
 }
+
