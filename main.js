@@ -107,8 +107,9 @@ function voltar(tipo) {
 /*Tela Cadastro*/
 function geraLista() {
     /*Informações Animal*/
-
+    document.getElementById("mensagemLista").innerText = "Antes de concluir o cadastro, certifique-se se as informações inseridas estão corretas: ";
     let ul = document.getElementById("lista")
+    ul.style.display = "block";
     let primeiroLi_Base = document.querySelector("li")
 
     let primeiroLi = ul.firstChild
@@ -198,7 +199,8 @@ function salvarDados() {
     document.getElementById("btn_Editar").disabled = true;
     document.getElementById("btn_salvar").disabled = true;
     document.getElementById("btn_cadastrar").disabled = false;
-
+    document.getElementById("mensagemLista").innerText = "";
+    document.getElementById("lista").style.display = "none";
     alert("Pet cadastrado com sucesso!!");
     //window.location.href = "perfil.html";
     criaTabela;
@@ -207,7 +209,6 @@ function salvarDados() {
 window.onload = () => {
     let cadastrar = document.getElementById("btn_cadastrar");
     cadastrar.addEventListener("click", geraLista);
-
 }
 
 window.onload = () => {
