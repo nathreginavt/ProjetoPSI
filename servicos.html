@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
+  <script src="servicos.js" defer></script>
 
   <title>Vida Animal</title>
 </head>
@@ -36,37 +36,37 @@
     <div>
       <h3>BANHO</h3>
       <p id="pBanho"> </p>
-      <button id="btnBanho" onclick="mudarBanho()">Saiba Mais...</button>
+      <button id="btnBanho">Saiba Mais...</button>
     </div>
 
     <div>
       <h3>TOSA</h3>
       <p id="pTosa"></p>
-      <button id="btnTosa" onclick="mudarTosa()">Saiba Mais...</button>
+      <button id="btnTosa">Saiba Mais...</button>
     </div>
 
     <div>
       <h3>CUIDADO COM AS UNHAS</h3>
       <p id="pUnhas"></p>
-      <button id="btnUnhas" onclick="mudarUnhas()">Saiba Mais...</button>
+      <button id="btnUnhas">Saiba Mais...</button>
     </div>
 
     <div>
       <h3>HOSPEDAGEM</h3>
       <p id="pHosp"></p>
-      <button id="btnHosp" onclick="mudarHosp()">Saiba Mais...</button>
+      <button id="btnHosp">Saiba Mais...</button>
     </div>
 
     <div>
       <h3>PET SITTER</h3>
       <p id="pPetSitter"></p>
-      <button id="btnPetSitter" onclick="mudarSitter()">Saiba Mais...</button>
+      <button id="btnPetSitter">Saiba Mais...</button>
     </div>
 
     <div>
       <h3>CRECHE</h3>
       <p id="pCreche"></p>
-      <button id="btnCreche" onclick="mudarCreche()">Saiba Mais...</button>
+      <button id="btnCreche">Saiba Mais...</button>
     </div>
   </main>
 
@@ -82,7 +82,6 @@
     <br>
 
     <a href="cadastro.html"><button id="btnAgende">CADASTRAR PET </button></a>
-    <!--<button id="btnApagar"> APAGAR </button> -->
   </div>
 
   <footer>
@@ -119,22 +118,5 @@
 
     <div class="divVazio"> </div>
   </footer>
-  <script>
-    let nm = document.getElementById("nome")
-    nm.addEventListener('keypress', () => {
-      document.getElementById("btnOK").disabled = false;
-    })
-
-    let ok = document.getElementById("btnOK")
-    ok.addEventListener('click', () => {
-      let p = document.getElementById("pNome")
-      p.innerText = "Olá, Sr.(a) " + document.getElementById("nome").value + "!"
-
-      document.getElementById("btnAgende").style.display = "inline";
-    }
-    );
-  </script>
-
 </body>
-
 </html>
