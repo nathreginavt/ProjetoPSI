@@ -208,11 +208,16 @@ function criaTabela() {
     linha.appendChild(colN);
     linha.appendChild(colR);
     linha.appendChild(colI);
+    console.log(linha)
 
-    var tabela = document.getElementById('tabelaPerfil')
+    
     var tbody = document.getElementById('tbody');
     //tabela.appendChild(linha);
+
+    var tabela = document.getElementById('tabelaPerfil')
+    console.log(tabela);
     tbody.appendChild(linha);
+    console.log(tbody)
 
 }
 
@@ -245,7 +250,6 @@ function salvarDados() {
     document.getElementById("lista").style.display = "none";
     alert("Pet cadastrado com sucesso!!");
     //window.location.href = "perfil.html";
-    criaTabela();
 }
 
 window.onload = () => {
