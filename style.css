@@ -75,6 +75,7 @@ nav{
     margin-right: 4%;
     padding-top: 3%;
     font-size: 1.2rem;
+    margin-top: 5%;
 }
 
 /* CONTEÚDO PRINCIPAL / MAIN */
@@ -147,9 +148,6 @@ footer > div > ul > li{
     list-style-type: none;
 }
 
-#listaDono{
-    list-style-type: none;
-}
 
 /*PÁGINA CONTATO*/
 #mapa {
@@ -257,3 +255,87 @@ th, td{
     text-align: center;
     margin-bottom: 1.5%;
 }
+
+form.formCadastro{
+    width: 40%;
+    margin-top: 2%;
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: #FEF19F;
+    
+    
+}
+
+.formCadastro div > .inputCadastro{
+    display: inline-block;
+    width: 50%;
+    margin: 2% auto;
+    padding: 1%;
+    font-size: 1rem;
+    
+}
+
+.inputCadastro input {
+    padding: 1.5%;
+    margin-bottom: 3%;
+    width: 45%;
+    margin-left: 5%;
+}
+fieldset{
+    padding: 5%;
+}
+
+#btn_cadastrar{
+width: 100%;
+padding: 1.5%;
+display: inline-block;
+margin-top: 2%;
+background-color:#fdc573;
+border: 1px solid black;
+border-radius: 10px;
+font-weight: bold;
+font-size: 1rem;
+}
+
+#btn_Editar, #btn_salvar{
+    width:55%;
+    padding: 0.5%;
+    background-color:#fdc573;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 2%;
+    margin-left: 0.5%;
+}
+.botoesCadastro{
+    display: flex;
+    flex-direction: row;
+}
+
+#btn_cadastro{
+    width:43%;
+    padding: 0.5%;
+    background-color:#fdc573;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 3%;
+    margin-left: 0.5%;
+}
+#btn_cadastro:hover{
+    background-color: #ffa51f;
+}
+
+#btn_cadastrar:hover{
+    background-color: #ffa51f;
+}
+#btn_Editar:hover{
+    background-color:#ffa51f;
+}
+#btn_salvar:hover{
+    background-color: #ffa51f;
+}
+#btnContato:hover{
+    background-color: #ffa51f;
+}
+

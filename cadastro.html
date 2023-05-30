@@ -28,25 +28,35 @@
   </header>
 
   <main class="main">
-    <h2>Cadastro</h2>
+    <h2>Cadastro do Pet</h2>
     <h3 id="mensagemDono"> </h3>
 
-    <form action="" id="cadastroForm">
+    <form action="" id="cadastroForm" class="formCadastro">
 
       <fieldset>
         <legend>Cadastro do Pet</legend>
-        <label for="nomePet">Nome do animal: </label>
-        <input type="text" id="nomePet" name="nomePet" required>
-
-        <label for="idade">Idade: </label>
-        <input type="text" id="idade" name="idade" required>
-
-        <label for="raca">Raça: </label>
-        <input type="text" id="raca" name="raca" required>
+        <div class="inputCadastro">
+          <label for="nomePet">Nome do animal: </label>
+          <input type="text" id="nomePet" name="nomePet" required>
+        </div>
+        <div class="inputCadastro">
+          <label for="idade">Idade: </label>
+          <input type="text" id="idade" name="idade" required>
+        </div>
+        <div class="inputCadastro">
+          <label for="raca">Raça: </label>
+          <input type="text" id="raca" name="raca" required>
+        </div>
       </fieldset>
+      
+        <input type="submit" value="Cadastrar" onclick="geraLista()" id="btn_cadastrar">
+        <div class="botoesCadastro">
+          <button id="btn_Editar" onclick="editarDados()" disabled="true">Editar</button>
+          <button id="btn_salvar" onclick="salvarDados()" disabled=true>Salvar</button>
+        </div>
+      
     </form>
 
-    <input type="submit" value="Ok" onclick="geraLista()" id="btn_cadastrar">
 
     <ul id="lista">
       <li id="item1"></li>
@@ -54,10 +64,7 @@
       <li id="item3"></li>
     </ul>
     <br>
-
-<button id="btn_Editar" onclick="editarDados()" disabled="true">Editar</button>
-<button id="btn_salvar" onclick="salvarDados()"disabled=true>Salvar</button>
-
+    
     <br><br><br><br>
   </main>
 
