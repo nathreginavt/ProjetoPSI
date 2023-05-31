@@ -111,6 +111,7 @@ function salvarDados() {
 
         //armazenar dados do animal no vetor
         dados.push({ nome: nome, idade: idade, raca: raca })
+
         localStorage.setItem('dados', JSON.stringify(dados))
 
         //habilitar/desabilitar inputs
@@ -126,6 +127,8 @@ function salvarDados() {
         document.getElementById("lista").style.display = "none";
 
         alert("Pet cadastrado com sucesso!!");
+    } else{
+        alert("Preencha todos os campos!")
     }
 }
                //lambda
